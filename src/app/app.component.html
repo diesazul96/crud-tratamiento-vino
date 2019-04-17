@@ -1,0 +1,36 @@
+<hello name="{{ name }}"></hello>
+<p>
+  Start editing to see some magic happen :)
+</p>
+
+<ul>
+  <li class="text" *ngFor="let item of items " (click)="seleccionarTratamiento(item)">
+   <b>ID: </b>{{item.id}}<br> 
+   <b>Origen del Agua: </b> {{item.origenAgua}}<br>
+   <b>Quimicos en el Agua: </b> {{item.quimicosAgua}}<br>
+   <b>Fertilizantes: </b> {{item.fertilizantes}}<br>
+   <b>Pesticidas: </b> {{item.pesticidas}}<br>
+   <b>Fungicidas: </b> {{item.fungicidas}}<br>
+  </li>
+</ul>
+
+  <b>Origen del Agua: </b><input placeholder="Origen del Agua" [(ngModel)]="item.origenAgua"><br>
+  <b>Quimicos en el Agua: </b><input placeholder="Quimicos del Agua" [(ngModel)]="item.quimicosAgua"><br>
+  <b>Fertilizantes: </b><input placeholder="Fertilizantes" [(ngModel)]="item.fertilizantes"><br>
+  <b>Pesticidas: </b><input placeholder="Pesticidas" [(ngModel)]="item.pesticidas"><br>
+  <b>Fungicidas: </b><input placeholder="Fungicidas" [(ngModel)]="item.fungicidas"><br><br>
+
+ <button type="button"
+          class="btn btn-primary"
+          (click)="createtratamientoDeDiego()">Guardar
+  </button>
+
+   <button type="button"
+          class="btn btn-primary"
+          (click)="deletetratamientoDeDiego()">Borrar
+  </button>
+
+   <button type="button"
+          class="btn btn-primary"
+          (click)="updatetratamientoDeDiego()">Actualizar
+  </button>
